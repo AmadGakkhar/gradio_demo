@@ -22,4 +22,4 @@ jobs:
         env:
           HF: ${{ secrets.HF }}
           GH_TOKEN: ${{ secrets.GT }}
-        run: git config --global credential.helper '!f() { sleep 1; echo "username=git token={GH_TOKEN}"; }; f' && git push --force https://AmadGakkhar:$HF@huggingface.co/spaces/AmadGakkhar/demo main
+        run: git push --force https://AmadGakkhar:$HF@huggingface.co/spaces/AmadGakkhar/demo main
