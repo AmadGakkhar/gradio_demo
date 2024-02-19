@@ -1,6 +1,4 @@
 name: Sync to Hugging Face hub
-env:
-  GITHUB_TOKEN: ${{ secrets.GT }}
 
 on:
   push:
@@ -23,4 +21,6 @@ jobs:
       - name: Push to hub
         env:
           HF: ${{ secrets.HF }}
+          GH_TOKEN: ${{ secrets.GT }}
+
         run: git push --force https://AmadGakkhar:$HF@huggingface.co/spaces/AmadGakkhar/demo main
