@@ -1,4 +1,7 @@
 name: Sync to Hugging Face hub
+env:
+  GITHUB_TOKEN: ${{ secrets.GT }}
+
 on:
   push:
     branches: [main]
